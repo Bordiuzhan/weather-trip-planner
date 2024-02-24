@@ -1,4 +1,5 @@
 import "./ForecastToday.css";
+import {snow} from "../../img/icons/index.js";
 
 const ForecastToday = () => {
     return (
@@ -6,8 +7,8 @@ const ForecastToday = () => {
             <div className="forecast-today">
                 <h2>Today</h2>
                 <div className="forecast-today__weather">
-                    <img src="../../assets/icons/cloudy.png
-                    " alt="weather-icon"/>
+
+                    <img src={snow} alt={"icon"} />
                     <div>
                         <h3>20°C</h3>
                         <p>Cloudy</p>
