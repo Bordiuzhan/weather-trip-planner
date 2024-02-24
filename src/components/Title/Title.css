@@ -1,0 +1,13 @@
+.hero-title {
+    border: 1px solid #000;
+
+    color: #fff;
+}
+.hero-title__text {
+    font-size: 1.5rem;
+    color: #000;
+    margin-top: 1rem;
+}
+.hero-title__text_bold {
+    font-weight:bold;
+}

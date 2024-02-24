@@ -1,0 +1,18 @@
+.list-of-weather {
+  display: flex;
+    flex-direction: column;
+    align-items:baseline;
+}
+.list-of-weather__title {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #000;
+}
+.list-of-weather__list{
+    display: flex;
+}
+.list-of-weather__item {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #000;
+}
