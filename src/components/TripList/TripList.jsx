@@ -5,7 +5,7 @@ import TripItem from "../TripItem/TripItem";
 import Modal from "../Modal/Modal";
 
 
-const TripList = () => {
+const TripList = ({selectedTripIndex,setSelectedTripIndex}) => {
     const [trips, setTrips] = useState([
         {
             id: 1,
@@ -35,7 +35,6 @@ const TripList = () => {
             img: cities[2].img
         }
     ]);
-    const [currentIndex, setCurrentIndex] = useState(0);
     const [isOpen, setIsOpen] = useState(false);
 
 
@@ -44,8 +43,8 @@ const TripList = () => {
             <div className={"list-of-trip"}>
                 <ul className={"list-of-trip__list"}>
                     {trips.map((trip, index) => (
-                        <TripItem key={index} trip={trip} index={index} currentIndex={currentIndex}
-                                  setCurrentIndex={setCurrentIndex}/>
+                        <TripItem key={index} trip={trip} index={index} selectedTripIndex={selectedTripIndex}
+                                  setSelectedTripIndex={setSelectedTripIndex}/>
                     ))}
                 </ul>
                 <button className={"list-of-trip__add-button"}

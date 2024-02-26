@@ -1,0 +1,25 @@
+.timer {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.timer__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    color: white;
+
+}
+
+.timer__item__value {
+    margin-bottom: 10px;
+    color: white;
+    font-size: 2.8em;
+    font-weight: 900;
+}
+
+.timer__item__label {
+
+}

@@ -1,13 +1,13 @@
 import "./TripItem.css";
 import React from "react";
 
-const TripItem = ({index, trip,currentIndex,setCurrentIndex}) => {
+const TripItem = ({index, trip,selectedTripIndex,setSelectedTripIndex}) => {
     return (
 
         <li
             key={trip.id}
-            className={`trip-item ${index === currentIndex ? "trip-item--selected" : ""}`}
-            onClick={() => setCurrentIndex(index)}
+            className={`trip-item ${index === selectedTripIndex ? "trip-item--selected" : ""}`}
+            onClick={() => setSelectedTripIndex(index)}
         >
             <div className="image-container">
                 <img src={trip.img} alt="Trip" width={200}/>
