@@ -62,9 +62,6 @@ const Modal = ({setIsOpen, setTrips}) => {
         if (!selectedOption || !startDate || !endDate) {
             return;
         }
-        console.log("City: ", selectedOption);
-        console.log("Start Date: ", startDate);
-        console.log("End Date: ", endDate);
 
         setTrips((prev) => {
             const newId = prev.length > 0 ? Math.max(...prev.map((item) => item.id)) + 1 : 1;

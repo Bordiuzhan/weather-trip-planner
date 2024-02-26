@@ -10,21 +10,30 @@ import {getWeather, getWeatherForecastPeriod} from "../../services/getWeather";
 
 
 const HomePage = () => {
-    const [trips, setTrips] = useState([
-        {
-            id: 1,
-            city: cities[0].value,
-            startDate: "2024-03-02",
-            endDate: "2024-03-17",
-            img: cities[0].img
-        },
-    ]);
-    console.log(trips)
+    /* Initial state for trips */
+    const initialTrip = {
+        id: 1,
+        city: cities[0].value,
+        startDate: "2024-03-02",
+        endDate: "2024-03-17",
+        img: cities[0].img
+    };
+    /* State for trips */
+    const localStorageTrips = localStorage.getItem("trips") ? JSON.parse(localStorage.getItem("trips")) : [];
+    const filteredLocalStorageTrips = localStorageTrips.filter(trip => trip.id !== initialTrip.id);
+    const [trips, setTrips] = useState([...filteredLocalStorageTrips, ...[initialTrip]]);
+    /* State for selected trip */
     const [selectedTripId, setSelectedTripId] = useState(0);
     const selectedTrip = trips.find(trip => trip.id === selectedTripId)
-
+    /* State for weather */
     const [weather, setWeather] = useState(null);
     const [weatherForecast, setWeatherForecast] = useState([]);
+
+    /* Saving trips to local storage */
+    useEffect(() => {
+            localStorage.setItem("trips", JSON.stringify(trips))
+        }
+        , [trips]);
 
     /* Fetching weather utils for the selected trip */
     useEffect(() => {
