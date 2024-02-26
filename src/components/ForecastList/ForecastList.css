@@ -1,18 +1,26 @@
 .list-of-weather {
-  display: flex;
-    flex-direction: column;
-    align-items:baseline;
-}
-.list-of-weather__title {
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #000;
-}
-.list-of-weather__list{
     display: flex;
+    flex-direction: column;
+
 }
-.list-of-weather__item {
-  margin: 10px;
-  padding: 10px;
-  border: 1px solid #000;
+
+.list-of-weather__title {
+    margin: 40px 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #151515;
 }
+
+.list-of-weather__container {
+    width: 100%;
+    overflow: auto;
+    margin: 0 10px;
+padding-bottom: 30px;
+}
+
+.list-of-weather__list {
+    display: flex;
+    gap: 20px;
+
+}
+

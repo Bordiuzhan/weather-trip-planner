@@ -1,9 +1,9 @@
 import "./Modal.css";
 import Select from "react-select";
 import {useEffect, useRef, useState} from "react";
-import cities from "../../data/cities";
+import {cities} from "../../utils/cities";
 
-const Modal = ({setIsOpen}) => {
+const Modal = ({setIsOpen, setTrips}) => {
     /* State variables to hold the options for the select input and the selected option */
     const [options, setOptions] = useState(cities)
     const [selectedOption, setSelectedOption] = useState(null);
@@ -65,6 +65,14 @@ const Modal = ({setIsOpen}) => {
         console.log("City: ", selectedOption);
         console.log("Start Date: ", startDate);
         console.log("End Date: ", endDate);
+
+        setTrips((prev) => {
+            const newId = prev.length > 0 ? Math.max(...prev.map((item) => item.id)) + 1 : 1;
+            return [{
+                id: newId, city: selectedOption.value, startDate: startDate, endDate: endDate, img: selectedOption.img
+            }, ...prev,];
+        });
+
         setIsOpen(false);
     }
     /* Function to handle the focus of the visible input */
@@ -105,8 +113,7 @@ const Modal = ({setIsOpen}) => {
                         <Select className={`modal__input-select ${errorCity ? "modal__input--error" : ""}`}
                                 styles={{
                                     control: (baseStyles, state) => ({
-                                        ...baseStyles,
-                                        border:"none",
+                                        ...baseStyles, border: "none",
                                     }),
                                 }}
                                 options={options}

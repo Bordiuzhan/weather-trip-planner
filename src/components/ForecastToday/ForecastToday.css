@@ -1,25 +1,58 @@
-.forecast{
-    width: 100%;
-    height: 100%;
-    background: -20% 20%/ 45%  no-repeat url("../../img/clouds.png"), -50% 70%/ 50%  no-repeat url("../../img/clouds.png"),108% 3%/ 45%  no-repeat url("../../img/clouds.png"), 90% 50%/ 45%  no-repeat url("../../img/clouds.png"), #16234b;
-}
-.forecast__background{
+.forecast {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(14, 12, 37, 0.9);
+    background-color: rgba(59 56 99 / 73%);
+
 }
-.forecast-today{
+
+
+.forecast-today {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-top: 50px;
+    margin-right: 80px;
+}
+
+.forecast-today__info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    padding: 10px 0;
+    font-size: 2rem;
+    color: white;
 }
-.forecast-today__weather {
+
+.forecast-today__weather{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
+    margin: 15px 0;
+}
+
+.forecast-today__weather__temperature {
+    font-size: 3.5rem;
+}
+
+.forecast-today__weather__unit-celsius {
+    font-size: 1.5rem;
+}
+.forecast-today__weather__unit-temp {
+    font-size: 1.2rem;
+    margin-top: 2px;
+
+}
+
+.forecast-today__week-day {
+font-weight: 800;
+}
+
+.forecast-today__weather {
+
+}
+.forecast-today__icon {
+    width: 90px;
+    height: 90px;
+    margin-left: 20px;
 }
