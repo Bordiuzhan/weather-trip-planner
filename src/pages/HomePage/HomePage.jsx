@@ -73,17 +73,17 @@ const HomePage = () => {
     }, [selectedTripId]);
 
     return (
-        <div className="container">
-            <div className="side-left">
-                <Title/>
-                <Search setSearchData={setSearch}/>
-                <TripList trips={filteredTrips} setTrips={setTrips} selectedTripId={selectedTripId}
-                          setSelectedTripId={setSelectedTripId}/>
-                <ForecastList weatherForecast={weatherForecast}/>
-            </div>
-            <div className="side-right">
-                <ForecastToday weather={weather} selectedTrip={selectedTrip}/>
-            </div>
+            <div className="container">
+                <div className="side-left">
+                    <Title/>
+                    <Search setSearchData={setSearch}/>
+                    <TripList trips={filteredTrips} setTrips={setTrips} selectedTripId={selectedTripId}
+                              setSelectedTripId={setSelectedTripId}/>
+                    <ForecastList weatherForecast={weatherForecast}/>
+                </div>
+                <div className="side-right">
+                    <ForecastToday weather={weather} selectedTrip={selectedTrip}/>
+                </div>
         </div>
     );
 };

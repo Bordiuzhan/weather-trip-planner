@@ -6,14 +6,15 @@
 }
 
 .list-of-trip__container {
-    width: 72%;
+    width: 71%;
+    height: 272px;
     position: relative;
 }
 
 .list-of-trip__list {
     width: 100%;
     gap: 40px;
-    padding-bottom: 60px;
+    padding-bottom: 30px;
     overflow: hidden;
     display: flex;
     flex-direction: row;
