@@ -1,8 +1,8 @@
 .list-of-weather {
   display: flex;
   flex-direction: column;
-  margin-top: 1.875rem;
-  margin-bottom: 3.75rem;
+  margin-top: 1rem;
+  margin-bottom:1rem;
 }
 
 .list-of-weather__title {
