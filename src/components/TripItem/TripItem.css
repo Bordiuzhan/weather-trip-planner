@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  cursor: pointer;
 }
 .trip-item:hover {
   box-shadow: rgba(0, 0, 0, 0.15) 0rem 0.1875rem 0.1875rem 0rem;
