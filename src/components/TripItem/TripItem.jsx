@@ -8,9 +8,6 @@ const TripItem = ({trip, selectedTripId, setSelectedTripId}) => {
     const formattedStartDate =startDate.split('-').join('.')
     const formattedEndDate =endDate.split('-').join('.')
 
-
-
-
     return (
         <li className={`trip-item ${id === selectedTripId ? "trip-item--selected" : ""}`}
             onClick={() => setSelectedTripId(id)}

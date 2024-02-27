@@ -24,7 +24,6 @@ const HomePage = () => {
     const localStorageTrips = localStorage.getItem("trips") ? JSON.parse(localStorage.getItem("trips")) : [];
     const filteredLocalStorageTrips = localStorageTrips.filter(trip => trip.id !== initialTrip.id);
     const [trips, setTrips] = useState([...filteredLocalStorageTrips, ...[initialTrip]]);
-
     const [search, setSearch] = useState("");
     const filteredTrips = trips.filter(trip => trip.city.toLowerCase().includes(search.toLowerCase()));
 

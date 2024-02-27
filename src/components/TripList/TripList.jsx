@@ -9,6 +9,10 @@ const TripList = ({trips, setTrips, selectedTripId, setSelectedTripId}) => {
     /* State for modal */
     const [isOpen, setIsOpen] = useState(false);
 
+    /* Sort trips by start trip date */
+    const sortedTrips = [...trips].sort((a, b) => new Date(a.startDate) - new Date(b.startDate));
+
+
     /* State for pagination */
     const [currentPage, setCurrentPage] = useState(1);
     const tripsPerPage = 3;
@@ -16,7 +20,7 @@ const TripList = ({trips, setTrips, selectedTripId, setSelectedTripId}) => {
     /* Logic for pagination */
     const indexOfLastTrip = currentPage * tripsPerPage;
     const indexOfFirstTrip = indexOfLastTrip - tripsPerPage;
-    const currentTrips = trips.slice(indexOfFirstTrip, indexOfLastTrip);
+    const currentTrips = sortedTrips.slice(indexOfFirstTrip, indexOfLastTrip);
 
     /* Function for pagination */
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
@@ -25,6 +29,8 @@ const TripList = ({trips, setTrips, selectedTripId, setSelectedTripId}) => {
     useEffect(() => {
         setCurrentPage(1)
     }, [trips]);
+
+
 
     return (<>
         <div className={"list-of-trip"}>
@@ -38,9 +44,9 @@ const TripList = ({trips, setTrips, selectedTripId, setSelectedTripId}) => {
                         <button className={"pagination__button-previous"} onClick={() => paginate(currentPage - 1)}
                                 disabled={currentPage === 1}><ArrowRoundPrevious/>
                         </button>}
-                    {currentPage < Math.ceil(trips.length / tripsPerPage) &&
+                    {currentPage < Math.ceil(sortedTrips.length / tripsPerPage) &&
                         <button className={"pagination__button-next"} onClick={() => paginate(currentPage + 1)}
-                                disabled={indexOfLastTrip >= trips.length}>
+                                disabled={indexOfLastTrip >= sortedTrips.length}>
                             <ArrowRoundNext/>
                         </button>}
                 </div>
