@@ -1,160 +1,156 @@
 .modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(176deg, black, transparent);
-    z-index: 1000;
-
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(176deg, black, transparent);
+  z-index: 1000;
 }
 
 .modal__center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .modal__content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 50%;
-    background-color: white;
-    border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  background-color: white;
+  border-radius: 0.3125rem;
 }
 
 .modal__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 20px 30px;
-    border-bottom: 1px solid #d2d0d0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1.25rem 1.875rem;
+  border-bottom: 0.0625rem solid #d2d0d0;
 }
 
 .modal__title-container {
-    display: flex;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  align-items: center;
+  width: 100%;
 }
 
 .modal__title {
-    margin: 0;
-    padding: 0;
-    font-weight: bold;
-    font-size: 1.2rem
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
 
 .modal__close-container {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  width: 100%;
 }
 
 .modal__close {
-    padding: 5px;
-    cursor: pointer;
-    color: #939292;
+  padding: 0.3125rem;
+  cursor: pointer;
+  color: #939292;
 }
 
 .modal__close:hover,
 .modal__close:focus {
-    outline: none;
-    color: black;
+  outline: none;
+  color: black;
 }
 
 .modal__body {
-    padding: 60px 30px;
-    width: 100%;
+  padding: 3.75rem 1.875rem;
+  width: 100%;
 }
 
 .modal__input-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1.25rem;
 }
 
 .modal__label {
-    margin-bottom: 5px;
-    font-weight: bold;
-    font-size: 1rem;
+  margin-bottom: 0.3125rem;
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .modal__required {
-    color: red;
-    margin-right: 2px;
+  color: red;
+  margin-right: 0.125rem;
 }
 
 .modal__input-select {
-    width: 100%;
-    border: 1px solid #d2d0d0;
-    border-radius: 5px;
+  width: 100%;
+  border: 0.0625rem solid #d2d0d0;
+  border-radius: 0.3125rem;
 }
 
 .modal__input {
-    width: 100%;
-    padding: 9px;
-    border: 1px solid #d2d0d0;
-    border-radius: 5px;
-    font-size: 1rem;
-    background: url("../../img/calendar.svg") no-repeat right 12px center;
+  width: 100%;
+  padding: 0.5625rem;
+  border: 0.0625rem solid #d2d0d0;
+  border-radius: 0.3125rem;
+  font-size: 1rem;
+  background: url('../../img/calendar.svg') no-repeat right 0.75rem center;
 }
 
 .modal__input--disabled {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
 .modal__input--hidden {
-    width: 0;
-    height: 0;
+  width: 0;
+  height: 0;
 }
 
 .modal__input--error {
-    border: 1px solid red;
+  border: 0.0625rem solid red;
 }
 
 .modal__footer {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    padding: 20px 30px;
-    border-top: 1px solid #d2d0d0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 1.25rem 1.875rem;
+  border-top: 0.0625rem solid #d2d0d0;
 }
 
 .modal__buttons-container {
 }
 
 .button {
-    padding: 10px 15px;
+  padding: 0.625rem 0.9375rem;
 }
 
 .button__cancel {
-    margin-right: 10px;
-    background-color: white;
-    border: 1px solid #d2d0d0;
-    border-radius: 4px;
-    cursor: pointer;
-
+  margin-right: 0.625rem;
+  background-color: white;
+  border: 0.0625rem solid #d2d0d0;
+  border-radius: 0.25rem;
+  cursor: pointer;
 }
 .button__cancel:hover {
-    background-color: #f2f2f2;
+  background-color: #f2f2f2;
 }
 
-
 .button__save {
-    background-color: dodgerblue;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+  background-color: dodgerblue;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
 }
 
 .button__save:hover {
-    background-color: #02529f;
+  background-color: #02529f;
 }
-

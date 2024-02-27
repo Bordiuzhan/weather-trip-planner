@@ -1,71 +1,69 @@
-
 .list-of-trip {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.875rem;
 }
 
 .list-of-trip__container {
-    width: 71%;
-    height: 272px;
-    position: relative;
+  width: 71%;
+  height: 17rem;
+  position: relative;
 }
 
 .list-of-trip__list {
-    width: 100%;
-    gap: 40px;
-    padding-bottom: 30px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+  width: 100%;
+  gap: 2.5rem;
+  padding-bottom: 1.875rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .pagination {
-    width: 40%;
-    position: absolute;
-    bottom: 0;
-    right: 50%;
-    transform: translateX(50%);
+  width: 40%;
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
 }
 
 .pagination__button-previous {
-    position: absolute;
-    left: 0;
-    fill: #939292;
+  position: absolute;
+  left: 0;
+  fill: #939292;
 }
 .pagination__button-previous:hover {
-    fill: #606060;
-    scale: 1.1;
+  fill: #606060;
+  scale: 1.1;
 }
 
 .pagination__button-next {
-    position: absolute;
-    right: 0;
-    fill: #939292;
-
+  position: absolute;
+  right: 0;
+  fill: #939292;
 }
 .pagination__button-next:hover {
-    fill: #606060;
-    scale: 1.1;
+  fill: #606060;
+  scale: 1.1;
 }
 .list-of-trip__add-button-plus {
-    fill: #000;
+  fill: #000;
   font-size: 2rem;
 }
 
 .list-of-trip__add-button {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    border: 1px solid #000;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 180px;
-    height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.625rem;
+  border: 0.0625rem solid #000;
+  border-radius: 0.3125rem;
+  cursor: pointer;
+  width: 11.25rem;
+  height: 11.25rem;
 }
 .list-of-trip__add-button:hover {
-    scale: 1.1;
+  scale: 1.1;
 }

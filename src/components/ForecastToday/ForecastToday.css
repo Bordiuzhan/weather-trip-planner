@@ -1,61 +1,54 @@
 .forecast {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background: rgba(59 56 99 / 73%) 95% 5%/ 15% no-repeat url("../../img/pingvin.png");
-
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(59 56 99 / 73%) 95% 5%/ 15% no-repeat url('../../img/pingvin.png');
 }
 
-
 .forecast-today {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    margin-top: 50px;
-    margin-right: 80px;
-    padding-top: 50px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-top: 3.125rem;
+  margin-right: 5rem;
+  padding-top: 3.125rem;
 }
 
 .forecast-today__info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 2rem;
-    color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  color: white;
 }
 
 .forecast-today__weather {
-    display: flex;
-    margin: 15px 0;
+  display: flex;
+  margin: 0.9375rem 0;
 }
 
 .forecast-today__weather__temperature {
-    font-size: 3.5rem;
+  font-size: 3.5rem;
 }
 
 .forecast-today__weather__unit-celsius {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .forecast-today__weather__unit-temp {
-    font-size: 1.2rem;
-    margin-top: 2px;
-
+  font-size: 1.2rem;
+  margin-top: 0.125rem;
 }
 
 .forecast-today__week-day {
-    font-weight: 800;
-}
-
-.forecast-today__weather {
-
+  font-weight: 800;
 }
 
 .forecast-today__icon {
-    width: 90px;
-    height: 90px;
-    margin-left: 20px;
+  width: 5.625rem;
+  height: 5.625rem;
+  margin-left: 1.25rem;
 }

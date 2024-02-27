@@ -6,12 +6,16 @@ import {icons} from "../../utils/icons";
 const ForecastToday = ({weather, selectedTrip}) => {
     /* Get the day of the week */
     const today = week.find(day => day.id === new Date().getDay()).day
+
     /* Get the start date of the selected trip and convert it to the correct format */
     const startDate = selectedTrip ? new Date(selectedTrip.startDate) : new Date(new Date().toISOString().split('T')[0]);
+
     /* Get the weather icon */
     const weatherIcon = weather ? icons.find(icon => icon.name === weather.icon).icon : icons.find(icon => icon.name === "clear-day").icon;
+
     /* Get the temperature */
     const temperature = weather ? Math.round(weather.temp) : 0;
+
     /* Get the City */
     const city = selectedTrip ? selectedTrip.city : "No city selected";
 

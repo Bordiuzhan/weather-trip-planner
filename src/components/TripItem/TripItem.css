@@ -1,44 +1,44 @@
-
 .trip-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 .trip-item:hover {
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;}
+  box-shadow: rgba(0, 0, 0, 0.15) 0rem 0.1875rem 0.1875rem 0rem;
+}
 
 .trip-item--selected {
-    background: #8484c9;
-    .trip-item__date {
-        color: white;
-    }
+  background: #8484c9;
+  .trip-item__date {
+    color: white;
+  }
 }
 .trip-item__image-container {
-    width: 180px;
-    height: 180px;
-    overflow: hidden;
+  width: 11.25rem;
+  height: 11.25rem;
+  overflow: hidden;
 }
 
 .trip-item__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .trip-item__description {
-    width: 100%;
-    padding: 12px;
-    border-right: solid 1px #939292;
-    border-left: solid 1px #939292;
-    border-bottom: solid 1px #939292;
+  width: 100%;
+  padding: 0.75rem;
+  border-right: solid 0.0625rem #939292;
+  border-left: solid 0.0625rem #939292;
+  border-bottom: solid 0.0625rem #939292;
 }
 .trip-item__city {
-    font-size: 0.9rem;
-    font-weight: bold;
+  font-size: 0.9rem;
+  font-weight: bold;
 }
 .trip-item__date {
-    font-size: 0.8rem;
-    margin-top: 10px;
-    color: #939292;
+  font-size: 0.8rem;
+  margin-top: 0.625rem;
+  color: #939292;
 }

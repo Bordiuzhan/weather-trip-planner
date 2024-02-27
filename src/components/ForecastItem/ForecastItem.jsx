@@ -13,6 +13,7 @@ const ForecastItem = ({forecast}) => {
     const tempMax = Math.round(tempmax);
     const tempMin = Math.round(tempmin);
 
+    /* Find the icon for the weather */
     const weatherIcon = icons.find((iconItem) => iconItem.name === icon);
 
     return (<li className={"forecast-item"}>
@@ -21,7 +22,7 @@ const ForecastItem = ({forecast}) => {
         <img className={"forecast-item__icon"}
              src={weatherIcon.icon} alt={icon}/>
         <div className={"forecast-item__temp-container"}>
-        <p>{tempMax}°</p>/<p>{tempMin}°</p>
+            <p>{tempMax}°</p>/<p>{tempMin}°</p>
         </div>
     </li>);
 };

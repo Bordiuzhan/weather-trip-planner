@@ -4,10 +4,11 @@ import './Search.css';
 const Search = ({setSearchData}) => {
     /* State for search */
     const [search, setSearch] = useState("");
+
     /* Handle search to filter trips */
     const handleSearch = (e) => {
-        setSearchData(e.target.value);
-        setSearch(e.target.value);
+        setSearchData(e.target.value.trim());
+        setSearch(e.target.value.trim());
     }
     return (<div className={"search"}>
         <input className={"search__input"}

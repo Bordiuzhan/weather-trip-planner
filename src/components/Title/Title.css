@@ -1,12 +1,12 @@
 .hero-title {
-    margin-top: 30px;
-    color: #fff;
+  margin-top: 1.875rem;
+  color: #fff;
 }
 .hero-title__text {
-    font-size: 1.5rem;
-    color: #000;
-    margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #000;
+  margin-top: 1rem;
 }
 .hero-title__text_bold {
-    font-weight:bold;
+  font-weight: bold;
 }

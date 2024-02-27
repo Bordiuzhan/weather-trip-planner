@@ -7,20 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ad98885-f256-4f41-bda0-73cac72c2cf9" name="Changes" comment="add trip item select">
-      <change afterPath="$PROJECT_DIR$/src/components/ForecastItem/ForecastItem.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modal/Modal.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Modal/Modal.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Slider/Slider.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Slider/Slider.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/img/cities/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TripItem/TripItem.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TripItem/TripItem.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TripItem/TripItem.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TripItem/TripItem.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TripList/TripList.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TripList/TripList.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TripList/TripList.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TripList/TripList.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/data/citys.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data/cities.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/HomePage/HomePage.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/HomePage/HomePage.css" afterDir="false" />
+    <list default="true" id="6ad98885-f256-4f41-bda0-73cac72c2cf9" name="Changes" comment="last commit">
+      <change beforePath="$PROJECT_DIR$/src/components/Search/Search.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search/Search.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +90,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708795997960</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="last commit">
+      <option name="closed" value="true" />
+      <created>1709055632989</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1709055632990</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -112,7 +108,8 @@
     <MESSAGE value="initial with Create React App" />
     <MESSAGE value="add components.&#10;add icon weather.&#10;add fetch func.&#10;add data city." />
     <MESSAGE value="add trip item select" />
-    <option name="LAST_COMMIT_MESSAGE" value="add trip item select" />
+    <MESSAGE value="last commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="last commit" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
