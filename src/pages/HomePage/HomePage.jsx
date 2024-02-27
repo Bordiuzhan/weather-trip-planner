@@ -10,7 +10,7 @@ import {getWeather, getWeatherForecastPeriod} from "../../services/getWeather";
 
 
 const HomePage = () => {
-    /* Initial state for trips */
+    /* Initial state for trips and selected trip */
     const initialTrip = {
         id: 1,
         city: cities[0].value,
@@ -18,13 +18,20 @@ const HomePage = () => {
         endDate: "2024-03-17",
         img: cities[0].img
     };
+    const selectedTripIdFromLocalStorage = localStorage.getItem("selectedTripId") ? JSON.parse(localStorage.getItem("selectedTripId")) : 1;
+
     /* State for trips */
     const localStorageTrips = localStorage.getItem("trips") ? JSON.parse(localStorage.getItem("trips")) : [];
     const filteredLocalStorageTrips = localStorageTrips.filter(trip => trip.id !== initialTrip.id);
     const [trips, setTrips] = useState([...filteredLocalStorageTrips, ...[initialTrip]]);
+
+    const [search, setSearch] = useState("");
+    const filteredTrips = trips.filter(trip => trip.city.toLowerCase().includes(search.toLowerCase()));
+
     /* State for selected trip */
-    const [selectedTripId, setSelectedTripId] = useState(0);
+    const [selectedTripId, setSelectedTripId] = useState(selectedTripIdFromLocalStorage);
     const selectedTrip = trips.find(trip => trip.id === selectedTripId)
+
     /* State for weather */
     const [weather, setWeather] = useState(null);
     const [weatherForecast, setWeatherForecast] = useState([]);
@@ -32,8 +39,9 @@ const HomePage = () => {
     /* Saving trips to local storage */
     useEffect(() => {
             localStorage.setItem("trips", JSON.stringify(trips))
+            localStorage.setItem("selectedTripId", JSON.stringify(selectedTripId))
         }
-        , [trips]);
+        , [trips, selectedTripId]);
 
     /* Fetching weather utils for the selected trip */
     useEffect(() => {
@@ -69,8 +77,8 @@ const HomePage = () => {
         <div className="container">
             <div className="side-left">
                 <Title/>
-                <Search/>
-                <TripList trips={trips} setTrips={setTrips} selectedTripId={selectedTripId}
+                <Search setSearchData={setSearch}/>
+                <TripList trips={filteredTrips} setTrips={setTrips} selectedTripId={selectedTripId}
                           setSelectedTripId={setSelectedTripId}/>
                 <ForecastList weatherForecast={weatherForecast}/>
             </div>

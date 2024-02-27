@@ -5,7 +5,7 @@ import {cities} from "../../utils/cities";
 
 const Modal = ({setIsOpen, setTrips}) => {
     /* State variables to hold the options for the select input and the selected option */
-    const [options, setOptions] = useState(cities)
+    const options = cities
     const [selectedOption, setSelectedOption] = useState(null);
 
     /* State variables to hold the error status of the inputs */
@@ -109,7 +109,7 @@ const Modal = ({setIsOpen, setTrips}) => {
                         </label>
                         <Select className={`modal__input-select ${errorCity ? "modal__input--error" : ""}`}
                                 styles={{
-                                    control: (baseStyles, state) => ({
+                                    control: (baseStyles) => ({
                                         ...baseStyles, border: "none",
                                     }),
                                 }}

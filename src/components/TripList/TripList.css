@@ -1,34 +1,70 @@
 
 .list-of-trip {
-    border: 1px solid #000;
     display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    margin-top: 20px;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.list-of-trip__container {
+    width: 72%;
+    position: relative;
 }
 
 .list-of-trip__list {
-    width: 70%;
-    gap: 20px;
-    overflow-x: auto;
+    width: 100%;
+    gap: 40px;
+    padding-bottom: 60px;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 
+.pagination {
+    width: 40%;
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    transform: translateX(50%);
+}
 
+.pagination__button-previous {
+    position: absolute;
+    left: 0;
+    fill: #939292;
+}
+.pagination__button-previous:hover {
+    fill: #606060;
+    scale: 1.1;
+}
+
+.pagination__button-next {
+    position: absolute;
+    right: 0;
+    fill: #939292;
+
+}
+.pagination__button-next:hover {
+    fill: #606060;
+    scale: 1.1;
+}
+.list-of-trip__add-button-plus {
+    fill: #000;
+  font-size: 2rem;
+}
 
 .list-of-trip__add-button {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
     padding: 10px;
     border: 1px solid #000;
     border-radius: 5px;
     cursor: pointer;
-    width: 200px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
+}
+.list-of-trip__add-button:hover {
+    scale: 1.1;
 }
