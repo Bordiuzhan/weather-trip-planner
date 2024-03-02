@@ -14,10 +14,11 @@ const HomePage = () => {
     const initialTrip = {
         id: 1,
         city: cities[0].value,
-        startDate: "2024-03-02",
-        endDate: "2024-03-17",
+        startDate: "2024-03-15",
+        endDate: "2024-03-30",
         img: cities[0].img
     };
+
     const selectedTripIdFromLocalStorage = localStorage.getItem("selectedTripId") ? JSON.parse(localStorage.getItem("selectedTripId")) : 1;
 
     /* State for trips */
