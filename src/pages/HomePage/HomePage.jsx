@@ -22,9 +22,17 @@ const HomePage = () => {
     const selectedTripIdFromLocalStorage = localStorage.getItem("selectedTripId") ? JSON.parse(localStorage.getItem("selectedTripId")) : 1;
 
     /* State for trips */
-    const localStorageTrips = localStorage.getItem("trips") ? JSON.parse(localStorage.getItem("trips")) : [];
-    const filteredLocalStorageTrips = localStorageTrips.filter(trip => trip.id !== initialTrip.id);
-    const [trips, setTrips] = useState([...filteredLocalStorageTrips, ...[initialTrip]]);
+    const localStorageTrips = localStorage.getItem("trips") ;
+    const [trips, setTrips] = useState(() => {
+            if (localStorageTrips !== null) {
+                return  JSON.parse(localStorageTrips)
+            } else {
+                return [initialTrip]
+            }
+        }
+    );
+
+    /* State for search */
     const [search, setSearch] = useState("");
     const filteredTrips = trips.filter(trip => trip.city.toLowerCase().includes(search.toLowerCase()));
 
@@ -74,17 +82,17 @@ const HomePage = () => {
     }, [selectedTripId]);
 
     return (
-            <div className="container">
-                <div className="side-left">
-                    <Title/>
-                    <Search setSearchData={setSearch}/>
-                    <TripList trips={filteredTrips} setTrips={setTrips} selectedTripId={selectedTripId}
-                              setSelectedTripId={setSelectedTripId}/>
-                    <ForecastList weatherForecast={weatherForecast}/>
-                </div>
-                <div className="side-right">
-                    <ForecastToday weather={weather} selectedTrip={selectedTrip}/>
-                </div>
+        <div className="container">
+            <div className="side-left">
+                <Title/>
+                <Search setSearchData={setSearch}/>
+                <TripList trips={filteredTrips} setTrips={setTrips} selectedTripId={selectedTripId}
+                          setSelectedTripId={setSelectedTripId}/>
+                <ForecastList weatherForecast={weatherForecast}/>
+            </div>
+            <div className="side-right">
+                <ForecastToday weather={weather} selectedTrip={selectedTrip}/>
+            </div>
         </div>
     );
 };
